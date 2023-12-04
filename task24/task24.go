@@ -10,11 +10,11 @@ type point struct {
 	y float64
 }
 
-func (p *point) GetX() float64 {
+func (p *point) X() float64 {
 	return p.x
 }
 
-func (p *point) GetY() float64 {
+func (p *point) Y() float64 {
 	return p.y
 }
 
@@ -30,7 +30,7 @@ func main() {
 	a := Init(1, 1)
 	b := Init(2, 2)
 
-	res := math.Sqrt(math.Pow(a.GetX()-b.GetX(), 2) + math.Pow(a.GetY()-b.GetY(), 2))
+	res := math.Sqrt(math.Pow(a.X()-b.X(), 2) + math.Pow(a.Y()-b.Y(), 2))
 
 	fmt.Printf("Distance = %v", res)
 }
