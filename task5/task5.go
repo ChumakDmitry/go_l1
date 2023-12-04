@@ -13,6 +13,7 @@ import (
 //канал, а с другой стороны канала — читать. По истечению N секунд программа
 //должна завершаться.
 
+// Реализация через context.WithDeadline
 func ReadFunc(ctx context.Context, ch chan int, wg *sync.WaitGroup) {
 	for {
 		select {

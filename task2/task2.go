@@ -14,6 +14,8 @@ func FindSquaresWG(numbers []int) []int {
 
 	for i := 0; i < len(numbers); i++ {
 		wg.Add(1)
+		// Здесь необходимо явно передать индекс в горутину
+		// чтобы использовалось правильное значение
 		go func(index int) {
 			defer wg.Done()
 
